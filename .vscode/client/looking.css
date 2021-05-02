@@ -17,6 +17,7 @@ p{
    text-align:center;
    border:#05000eb0 2px solid;
    border-left:#05000eb0 10px solid;
-   width: 500px; height: 40px;
+   border-right:#05000eb0 10px solid;
+    height: 40px;
    
 }
