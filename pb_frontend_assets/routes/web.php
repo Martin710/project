@@ -12,11 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
+
+Route::get( '/', function() {
+    
     return view('home');
-});//指向home.blade.php
+});
 
-Route::get('/pb', function () {
-    return view('pb');
-}); //指向pb.blade.php
+Route::get('/pb',[PageController::class,'pb']); //指向pb.blade.php
+Route::get('/product',[ProductController::class,'show']);

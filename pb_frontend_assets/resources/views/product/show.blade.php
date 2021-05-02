@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('content')
-
-    <h1>pbtest123 {{ $ver }} level {{ $level }}</h1>
-    
+    <h1>Dog</h1>
+    <img width="400" src="{{$imageUrl}}">
 @endsection
 
 @section('inline_js')
