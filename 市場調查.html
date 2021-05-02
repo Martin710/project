@@ -1,0 +1,106 @@
+<HTMLtest>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>市場調查</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="style/testcss.css" rel="stylesheet" type="text/css">
+    <script src="Javascript.js" async></script>
+    <script>window.onload = initPage;
+      function initPage() {
+        // 取得「送出」按鈕的參考
+        var subBtn = document.getElementById("sub_btn");
+        // 為按鈕加入事件處理器
+        subBtn.onclick = function () {
+          MakeRequest();  // 建立請求的函式，我們稍後會定義它
+        }
+      }</script>
+      
+</head>
+<body>
+  <h1>你好，我們是東海大學的學生。我們想透過這份問卷作個調查，想知道民眾市面上購買的各式裝置與軟體是否能對照顧長輩上有實質幫助。</h1>
+  <h2><strong>本問卷採匿名方式，個人資料不會外流，可安心填答，感謝您願意花時間填寫。</strong></h2>
+  <form>
+    Q1:請問您的性別?<br>
+      <input type="radio" name="Fruit" value="Apple"> 男<br>
+      <input type="radio" name="Fruit" value="Bananas"> 女<br>
+    Q2:請問您的年齡?<br>
+      <input type="radio" name="Years old" value="Twentydown"> 20歲(含)以下<br>
+      <input type="radio" name="Years old" value="Twenty to Thirty"> 20~30歲(含)<br>
+      <input type="radio" name="Years old" value="Thirty to Forty"> 30~40歲(含)<br>
+      <input type="radio" name="Years old" value="Forty to Fifty"> 40~50歲(含)<br>
+      <input type="radio" name="Years old" value="Fifty to sixty"> 50歲~60歲(含)<br>
+      <input type="radio" name="Years old" value="Sixtyup"> 60歲(含)以上<br>
+    Q3:家中如何照顧老一輩的長輩?<br>
+    <select name"select_one">
+      <option value="1">雇用看護照顧</option>
+      <option value="2">由老人養護中心等專業人員照顧</option>
+      <option value="3">由家人共同照顧</option>
+      <option value="4">其他</option> 
+    </select>  <br>
+    Q3-1:家中是否有「電動代步車」?<br>
+      <input type="radio" name= "what if" value="Yes"> 有
+      <input type="radio" name= "what if" value="No"> 沒有<br>
+    Q3-2:您認為代步車行駛倒在路上危險嗎?<br>
+      <input type="radio" name= "what if" value="Dangerous"> 危險
+      <input type="radio" name= "what if" value="Safe"> 不危險<br>
+    Q3-3:若是有一個「智能輔助盒子」可讓代步車在路上更安全，您會考慮購買嗎?<br>
+      <input type="radio" name= "what if" value="Yes"> 會
+      <input type="radio" name= "what if" value="Maybe"> 有可能會
+      <input type="radio" name= "what if" value="No"> 不會<br>
+    Q4:被照顧的長輩有使用智慧型手機嗎?<br>
+     <input type="radio" name= "YesNo" value="Yes"> 有
+     <input type="radio" name= "YesNo" value="No"> 沒有<br>
+    Q5:請問被照顧的長輩今年貴庚?(以最年長者為主)<br>
+      <input type="radio" name= "65-" value="65down"> 低於65歲
+      <input type="radio" name= "65+" value="65up"> 65歲(含)以上<br>
+    Q6:您有擔心看護不夠用心照顧長輩的疑慮嗎?<br>
+      <input type="radio" name= "YesNo" value="Yes"> 有擔心
+      <input type="radio" name= "YesNo" value="No"> 不擔心<br>
+    Q7:下列是一款「查看長輩或監督看護是否用心照顧的軟體」的功能，請依照實用性由1~5(低到高)給分。<br>
+      <input type="radio" name= "How useful?" value="Very Unuseful"> 1
+      <input type="radio" name= "How useful?" value="A little unuseful"> 2
+      <input type="radio" name= "How useful?" value="No idea"> 3
+      <input type="radio" name= "How useful?" value="Quiet useful"> 4
+      <input type="radio" name= "How useful?" value="Very useful"> 5<br>
+      Q7-1:查看照顧者(看護等等)的狀態<br>
+        <textarea></textarea><br>
+      Q7-2:顯示長輩目前位置<br>
+        <textarea></textarea><br>  
+      Q7-3:顯示附近長輩可參加的活動<br>
+        <textarea></textarea><br>
+      Q7-4:騎乘代步車時發生危險通知<br>
+        <textarea></textarea><br>  
+      Q7-5:如果代步車發生傾倒、碰撞等狀況，會發送緊急通知給家屬與看護<br>
+        <textarea></textarea><br>  
+    Q8:下列是「智慧輔助盒子」的功能，請依照實用性由1~5(低到高)給分。<br>
+      <input type="radio" name= "How useful?" value="Very Unuseful"> 1
+      <input type="radio" name= "How useful?" value="A little unuseful"> 2
+      <input type="radio" name= "How useful?" value="No idea"> 3
+      <input type="radio" name= "How useful?" value="Quiet useful"> 4
+      <input type="radio" name= "How useful?" value="Very useful"> 5<br>
+      Q8-1:代步車定位<br>
+        <textarea></textarea><br>
+      Q8-2:後方來車提醒<br>
+        <textarea></textarea><br>  
+      Q8-3:轉彎語音提醒<br>
+        <textarea></textarea><br>
+      Q8-4:代步車電量顯示<br>
+        <textarea></textarea><br>  
+      Q8-5:家屬的貼心叮嚀<br>
+        <textarea></textarea><br>  
+      Q8-6:播放音樂功能<br>
+        <textarea></textarea><br>   
+    Q9:「智慧輔助盒子」的功能，有幫助到您照顧長輩嗎?可以列出您認為的優缺點。<br>
+      <textarea></textarea><br>
+    Q10:「長輩取向的手機應用程式」的功能，有幫助到您照顧長輩嗎?可以列出您認為的優缺點。<br>
+      <textarea></textarea><br>
+  </form>
+  <INPUT name="pclog" type="button" value="繳交" onClick="location.href='https://www.peekme.cc/post/757147'"><br>
+  <a href="https://www.peekme.cc/post/757147">更多Meow</a>
+</body>
+</html>
