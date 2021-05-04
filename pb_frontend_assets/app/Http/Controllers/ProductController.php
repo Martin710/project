@@ -6,11 +6,28 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    function show()
+    function show(Request $request)
     {
-        $imageUrl = asset('images/dog.jpg');
+
+        $id = $request->input('id');
+
+        $products =[
+            [
+                "imageUrl" => asset('images/dog.jpg')
+
+            ],
+            [
+                "imageUrl" => asset('images/dog1.jpg')
+
+            ]
+        ];
+        
+        $product = $products[$id];
+        //var_dump($product);
+
         return view('product.show',[
-            "imageUrl" => $imageUrl
+            "product" => $product
         ]);
+        
     }
 }
