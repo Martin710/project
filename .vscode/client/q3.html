@@ -1,19 +1,37 @@
 <html>
 <meta charset="UTF-8">
 <link href = "looking.css" rel="stylesheet" media="all">
+<link href = "./css/bootstrap.min.css" rel="stylesheet">
+<script src="./js/bootstrap.min.js"></script>
 <body>
 <div id="wrap">
     <h1>填答者與年長家人問題</1>
 </div>
-<div id ="part1">
-    <p> 問題：您的年齡為？</p><br>
-    <form  action="q4.html">
-      <option value="1">雇用看護照顧</option>
-      <option value="2">由老人養護中心等專業人員照顧</option>
-      <option value="3">由家人共同照顧</option>
-      <option value="4">其他</option> 
+<!-- 
+<script>
+function addquestion(){
+var a1 = document.forms["bigQA"].elements["answer1"];
+var a2 = document.forms["bigQA"].elements["answer2"];
+var a3 = document.forms["bigQA"].elements["answer3"];
+var a4 = document.forms["bigQA"].elements["answer4"];
+if(a3.checked&&a4.checked)
+alert("good");
+else alert("sad");	
+}
+</script>
+ -->
 
+
+
+<div id ="part1">
+    <p> 問題：家中如何照顧老一輩的長輩？</p><br>
+    <form name="bigQA"  action="q4.html" onsubmit="addquestion">
+        <input type="checkbox" name="howcare1" value="employment">雇用看護照顧
+        <input type="checkbox" name="howcare2" value="center">由老人養護中心等專業人員照顧
+        <input type="checkbox" name="howcare3" value="family">家人照顧
+        <input type="checkbox" name="howcare4" value="other">其他
         <input type="submit" value="下一題"style="width:100px;height:30px;font-size:20px;" >
     </form>
+   
 </body>
 </html>
