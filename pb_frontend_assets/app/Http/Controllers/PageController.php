@@ -9,7 +9,7 @@ class PageController extends Controller
     function pb(Request $request)
     {
         $level = 51;
-        $version = $request->input('version');
+        $version = $request->input('version');//request
 
         return view('pb',[
         'ver' => $version,
