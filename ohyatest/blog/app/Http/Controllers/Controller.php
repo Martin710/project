@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 
-class Controller extends BaseController
+class UserController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    /**
+     * 显示指定用户的简介
+     *
+     * @param  int  $id
+     * @return \Illuminate\View\View
+     */
+    public function show($id)
+    {
+        return view('user.profile', ['user' => User::findOrFail($id)]);
+    }
 }
